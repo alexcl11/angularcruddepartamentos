@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>
+        Departamentos
+    </h1>
+    @if(departamentos.length>0){
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nombre</th>
+                    <th>Localidad</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(d of departamentos; track d){
+                    <tr>
+                        <td>{{d.numero}}</td>
+                        <td>{{d.nombre}}</td>
+                        <td>{{d.localidad}}</td>
+                        <td class="text-end">
+                            <a [routerLink]="['/details/' + d.numero +'/'+d.nombre + '/' + d.localidad]" class="btn btn-success mx-2">Detalles</a>
+                            <a [routerLink]="['/update']" class="btn btn-primary mx-2">Modificar</a>
+                            <button class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }@else{
+        <div class="container d-flex justify-content-center">
+            <img src="/assets/loading.gif"/>
+        </div>
+    }
+</div>
