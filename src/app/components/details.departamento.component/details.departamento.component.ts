@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './details.departamento.component.css',
 })
 export class DetailsDepartamentoComponent {
-
+  
 }
