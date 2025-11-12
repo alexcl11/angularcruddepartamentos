@@ -20,8 +20,8 @@
                         <td>{{d.localidad}}</td>
                         <td class="text-end">
                             <a [routerLink]="['/details/' + d.numero +'/'+d.nombre + '/' + d.localidad]" class="btn btn-success mx-2">Detalles</a>
-                            <a [routerLink]="['/update']" class="btn btn-primary mx-2">Modificar</a>
-                            <button class="btn btn-danger">Eliminar</button>
+                            <a [routerLink]="['/update', d.numero]" class="btn btn-primary mx-2">Modificar</a>
+                            <button (click)="deleteDepartamento(d.numero)" class="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>
                 }

@@ -8,7 +8,7 @@ import { DetailsDepartamentoComponent } from './components/details.departamento.
 const routes: Routes = [
   {path: "", component: DepartamentosComponent},
   {path: "create", component: CreateDepartamentoComponent},
-  {path: "update", component: UpdateDepartamentoComponent},
+  {path: "update/:id", component: UpdateDepartamentoComponent},
   {path: "details/:id/:nombre/:localidad", component: DetailsDepartamentoComponent},
 ];
 

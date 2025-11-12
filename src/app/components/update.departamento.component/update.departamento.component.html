@@ -1,1 +1,11 @@
-<p>update.departamento.component works!</p>
+<div class="container">
+    <form #formCreate = "ngForm" (ngSubmit)="updateDepartamento()">
+        <label>Número</label>
+        <input disabled type="number" class="form-control" name="cajanumero" [(ngModel)]="cajanumero"/>
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="cajanombre" [(ngModel)]="cajanombre"/>
+        <label>Localidad</label>
+        <input type="text" class="form-control" name="cajalocalidad" [(ngModel)]="cajalocalidad"/>
+        <button class="btn btn-primary my-3" >Modificar</button>
+    </form>
+</div>

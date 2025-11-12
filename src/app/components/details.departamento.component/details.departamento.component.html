@@ -1,1 +1,18 @@
-<p>details.departamento.component works!</p>
+
+<div class="container">
+    <a [routerLink]="['/']" class="btn btn-primary">Volver</a>
+    @if(departamento){
+        <div class="card mt-3 details-card">
+            <div class="card-body">
+                <h5 class="card-title">Departamento {{ departamento.numero }}</h5>
+                <p class="card-text"><strong>Nombre:</strong> {{ departamento.nombre }}</p>
+                <p class="card-text"><strong>Localidad:</strong> {{ departamento.localidad }}</p>
+            </div>
+        </div>
+    }@else{
+        <div class="container d-flex justify-content-center">
+            <img src="/assets/loading.gif"/>
+        </div>
+    }
+    
+</div>

@@ -23,7 +23,6 @@ export class CreateDepartamentoComponent {
     let numero = parseInt(this.cajanumero)
     let departamento = new Departamento(numero, this.cajanombre, this.cajalocalidad)
     this._service.createDepartamento(departamento).subscribe(response => {
-      console.log("insertado")
       this._router.navigate(['/'])
     })
     
